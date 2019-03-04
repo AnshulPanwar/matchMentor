@@ -1,0 +1,14 @@
+
+
+    
+    <!-- <mat-list-item *ngFor="let cand of candidateList; let i = index"
+     (click)="selectCandidate(cand)"  [ngClass]="{'active': cand.active}"
+      id="{{cand.mentorId}}" 
+      >{{cand.Name}} | {{cand.mentorScore}}</mat-list-item> -->
+  
+      <div class="list-item" *ngFor="let cand of candidateList; let i = index"
+      [class.active]="sIndex === i" 
+      (click)="setIndex(i,cand.mentorId)" [id]="cand.mentorId"
+      
+       >{{cand.name}}</div>
+

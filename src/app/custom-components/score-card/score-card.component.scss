@@ -1,0 +1,25 @@
+.green-color{ 
+  background:#a1dd70;}
+.blue-color{ 
+  background: #408E61; color: white;  }
+.yellow-color{ 
+  background: #FAC70B  }
+.amber-color{ 
+  background: #f77754; color: white }
+.red-color{ 
+  background: #fb3569  }
+
+.white-color{ 
+  background: white; color: white  }
+.floating-score{ 
+  width: 50px;
+  height:50px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-right:8px;
+  right:15px;
+}

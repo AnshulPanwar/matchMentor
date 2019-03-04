@@ -1,0 +1,53 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$default-primary: mat-palette($mat-light-blue, 900);
+$default-accent : mat-palette($mat-amber, 700);
+$default-theme : mat-light-theme($default-primary, $default-accent);
+
+@include angular-material-theme($default-theme);
+
+.sidenav__button-active {
+  background-color:#035396;
+  color: white !important;
+}
+
+mat-toolbar.mat-toolbar {
+  background-color: #035396;
+}
+
+.main__main-content {
+    background-color:  mat-color($mat-blue-grey, 50);
+}
+
+.page-header {
+    background: url(/assets/bg_brand_banner_tall-new.png) no-repeat right top;
+    background-color: #035396;
+}
+
+.staff-card.selected {
+    border: 0.5rem solid mat-color($default-accent);
+}
+
+.template-select__header {
+    background-color: #01579d;
+    color: white;
+}
+
+.login-form__reset-password__p a{
+    color: mat-color($default-primary);
+    cursor: pointer;
+}
+
+.login-container{ 
+    background-color: mat-color($default-primary);
+}   
+
+.subheader{ 
+    color:mat-color($default-primary);
+}
+
+.panel{ 
+	border: 1px solid mat-color($default-primary);
+}

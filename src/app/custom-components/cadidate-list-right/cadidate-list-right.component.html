@@ -1,0 +1,6 @@
+    <div class="list-item"
+    *ngFor="let cand of candidateList"
+    [ngClass]="{'active': cand.active}"
+    (click)="activateClass(cand,cand.menteeId)"
+    >{{ cand.name}}</div>
+  

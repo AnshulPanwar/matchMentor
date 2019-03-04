@@ -1,0 +1,103 @@
+<div *ngIf="maxMentee == 3">
+  <div class="am3__matchTreeContainer">
+
+    <div class="am3__mentorContainer">
+      <div class="am3__dragMentor" id="mentor-{{mentorId}}">{{mentorName}} 
+ 
+      </div>
+      <div class="spacer"></div>
+      <mat-icon color="basic" class="open-profile-button" aria-label="Close Modal" (click)="openProfileModal()">face</mat-icon>
+    </div>
+
+    <img src="/assets/3men.svg" width="300px;"/>
+
+    <div class="user-container">
+      <span *ngFor="let index of [ 0, 1, 2 ]"> 
+          <div  class="am3__profileContainerOne" (drop)="drop($event)" (dragover)="allowDrop($event)">
+              <am3-score-card *ngIf="mentees[index]" [score]="mentees[index].mentorScore"></am3-score-card>
+              <am3-score-card *ngIf="mentees[index]" [score]="mentees[index].menteeScoreCombined"></am3-score-card>
+              <am3-score-card *ngIf="mentees[index]" [score]="mentees[index].menteeScore"></am3-score-card>
+              <am3-score-card *ngIf="!mentees[index]" score="0"></am3-score-card>
+              <am3-score-card *ngIf="!mentees[index]" score="0"></am3-score-card>
+              <am3-score-card *ngIf="!mentees[index]" score="0"></am3-score-card>
+              <div class="am3__profileContainerOne am3__profileContainerTwo">
+                  <div *ngIf="mentees[index]" class="am3__dragMentee" draggable="true" (dragstart)="drag($event)" id="mentee-{{mentees[index].menteeId}}">{{mentees[index].menteeName}}
+                      <div class="spacer"></div>
+                      <mat-icon color="basic" class="open-profile-button" aria-label="Close Modal" (click)="openProfileModal()">face</mat-icon>
+                  </div>
+              </div>
+          </div>
+        </span>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="maxMentee == 2">
+  <div class="am3__matchTreeContainer">
+
+    <div class="am3__mentorContainer">
+      <div class="am3__dragMentor" id="mentor-{{mentorId}}">{{mentorName}}
+         
+      </div>
+      <div class="spacer"></div>
+      <mat-icon color="basic" class="open-profile-button" aria-label="Close Modal" (click)="openProfileModal()">face</mat-icon>
+    </div>
+
+
+    <img src="/assets/2men.svg" width="300px;"/>
+
+
+
+    
+    <div class="user-container">
+      <span *ngFor="let index of [ 0, 1 ]"> 
+        <div class="am3__profileContainerOne" id="mentor-{{mentorId}}-mentee-{{index}}" (drop)="drop($event)" (dragover)="allowDrop($event)">
+            <am3-score-card *ngIf="mentees[index]" [score]="mentees[index].mentorScore"></am3-score-card>
+            <am3-score-card *ngIf="mentees[index]" [score]="mentees[index].menteeScoreCombined"></am3-score-card>
+            <am3-score-card *ngIf="mentees[index]" [score]="mentees[index].menteeScore"></am3-score-card>
+            <am3-score-card *ngIf="!mentees[index]" score="0"></am3-score-card>
+            <am3-score-card *ngIf="!mentees[index]" score="0"></am3-score-card>
+            <am3-score-card *ngIf="!mentees[index]" score="0"></am3-score-card>
+            <div class="am3__profileContainerOne am3__profileContainerTwo">
+              <div *ngIf="mentees[index]" class="am3__dragMentee" draggable="true" (dragstart)="drag($event)" id="mentee-{{mentees[index].menteeId}}">{{mentees[index].menteeName}}
+                  <div class="spacer"></div>
+                  <mat-icon color="basic" class="open-profile-button" aria-label="Close Modal" (click)="openProfileModal()">face</mat-icon>
+              </div>
+            </div>
+        </div>
+      </span>
+    </div>
+
+  </div>
+</div>
+<div *ngIf="maxMentee == 1">
+  <div class="am3__matchTreeContainer">
+
+    <div class="am3__mentorContainer">
+      <div class="am3__dragMentor" id="mentor-{{mentorId}}">{{mentorName}}</div>
+      <div class="spacer"></div>
+       <mat-icon color="basic" class="open-profile-button" aria-label="Close Modal" (click)="openProfileModal()">face</mat-icon>
+    </div>
+
+    <img src="/assets/1men.svg" width="300px;"/>
+
+    
+    <div class="user-container">
+          <div class="am3__profileContainerOne" (drop)="drop($event)" id="mentor-{{mentorId}}-mentee-0"(dragover)="allowDrop($event)">
+              <am3-score-card *ngIf="mentees[0]" [score]="mentees[0].mentorScore"></am3-score-card>
+              <am3-score-card *ngIf="mentees[0]" [score]="mentees[0].menteeScoreCombined"></am3-score-card>
+              <am3-score-card *ngIf="mentees[0]" [score]="mentees[0].menteeScore"></am3-score-card>
+              <am3-score-card *ngIf="!mentees[0]" score="0"></am3-score-card>
+              <am3-score-card *ngIf="!mentees[0]" score="0"></am3-score-card>
+              <am3-score-card *ngIf="!mentees[0]" score="0"></am3-score-card>
+              <div class="am3__profileContainerOne am3__profileContainerTwo">
+                <div *ngIf="mentees[0]" class="am3__dragMentee" draggable="true" (dragstart)="drag($event)" id="mentee-{{mentees[0].menteeId}}">
+                  {{mentees[0].menteeName}}
+                  <div class="spacer"></div>
+                  <mat-icon color="basic" class="open-profile-button" aria-label="Close Modal" (click)="openProfileModal()">face</mat-icon>
+                </div>
+              </div>
+          </div>
+    </div>
+  </div>
+</div>

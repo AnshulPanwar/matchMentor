@@ -1,0 +1,43 @@
+<am3-page-header label="AM3: Advanced Mentor & Mentee Matcher">
+  <div class="header-container">
+  </div>
+</am3-page-header>
+
+<div class="top-container content" (click)="showButtons = false" *ngIf="!loading">
+
+  <div class="right-container">
+    <am3-stats-component [count]="totalMatches" countLabel="Match" countColor="grey">
+      <span class="am3__sliderLabel">threshold:</span>
+      <span class="am3__sliderValue" id="slideValue">{{threshold}} %</span>
+      <mat-slider min="1" max="100" step="1" value="1" id="slider" (input)="onInputChange($event)"></mat-slider>
+      <button mat-raised-button class="am3__rerunButton" color="primary" (click)="runMatch()">Rerun Match
+      </button>
+      
+      <button mat-raised-button color="primary" [routerLink]="[ '/home', 'match' ]" fragment="matched">Review Match</button>
+
+    </am3-stats-component>
+
+    <am3-stats-component [count]="approvedPairings" countLabel="Approved" countColor="#159319">
+      <button mat-raised-button color="primary" class="am3__button" [routerLink]="[ '/home', 'match' ]" fragment="approved">Review
+        Approved</button>
+      <div style="clear:both;"></div>
+    </am3-stats-component>
+
+
+    <am3-stats-component [count]="unapprovedPairings" countLabel="Pending" countColor="#D2702A">
+      <div class="am3__pendingContainer">
+        <span class="am3__pendingMentors">{{unpairedMentors}} Mentors</span>
+        <button mat-raised-button color="primary" class="am3__button" [routerLink]="[ '/home', 'profile' ]" fragment="mentor">Assign
+          Mentors</button>
+      </div>
+      <br /><br /><br />
+      <div class="am3__pendingContainerbeta">
+        <span class="am3__pendingMentors">{{unpairedMentees}} Mentees</span>
+        <button mat-raised-button color="primary" class="am3__button" [routerLink]="[ '/home', 'profile' ]" fragment="mentee">Assign
+          Mentees</button>
+      </div>
+      <div style="clear:both;"></div>
+    </am3-stats-component>
+
+  </div>
+</div>

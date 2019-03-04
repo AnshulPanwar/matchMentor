@@ -1,0 +1,11 @@
+<div (drop)="drop($event)" 
+[id]="menteeId" 
+class="am3__pendingList" 
+(dragover)="allowDrop($event)">
+  <div draggable="true"
+   id="pending-{{menteeId}}" class="am3__pendingDrag" 
+   (dragstart)="drag($event)">{{menteeName}}
+    <div class="spacer"></div>
+    <am3-score-card-right style="margin-top:20px;margin-right:10px" [score]="menteeScoreCombined"></am3-score-card-right>
+  </div>
+</div>

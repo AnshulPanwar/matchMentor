@@ -1,0 +1,59 @@
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content-container{ 
+  background-color: #3f51b5;
+}
+
+.header-mat-toolbar{ 
+  background: white;
+}
+
+@mixin mat-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+}
+
+
+.theme-select mat-icon{ 
+  display: flex;
+  @include mat-icon-size( 4.0rem );
+  align-items: center;
+}
+
+.eab-logo {
+display: block;
+height: 2.5em;
+width: 15em;
+background: no-repeat center left;
+    background-image: none;
+    background-size: auto auto;
+background-size: contain;
+background-image: url('/assets/eab_logo.png');
+}
+
+.eab-logo span {
+border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+
+.menu-button {
+color:#333f48;
+}

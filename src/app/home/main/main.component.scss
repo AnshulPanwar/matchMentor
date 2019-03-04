@@ -1,0 +1,24 @@
+app-side-nav{ 
+  height:100%;
+}
+
+.main{ 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 6.4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 600px){ 
+  .main{ 
+      top: 5.6rem;
+  }
+}

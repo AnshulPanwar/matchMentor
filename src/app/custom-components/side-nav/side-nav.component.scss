@@ -1,0 +1,94 @@
+@import '../../../base-styles/settings.scss';
+
+.sidenav{ 
+    display: flex;
+    min-height:100%;
+    box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+    
+.sidenav__h3 {
+    height:1rem;
+    background: #ed8b00;
+}
+
+.sidenav__ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav__button{ 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin: 0;
+    border-color: rgba(0,0,0,.06);
+    padding: 15px 30px;
+    text-align: left;
+    width:100%;
+
+    font-size: 1.8rem;
+    color: #333f48;
+    font-family: "Museo Slab","Rockwell",serif;
+}
+
+
+mat-sidenav-container{ 
+    height:100%;
+}
+
+.main__mat-sidenav-container{
+    top:0;
+    bottom:0;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main__main-content {
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex:1;
+    flex-basis: auto;
+    width:100%;
+    min-height: calc( 100% - 10rem );
+}
+
+.app-footer{
+    display:flex;
+    height:7.5rem;
+    width:100%;
+    align-items: space-between;
+    align-items: center;
+    background: white;
+    border-top: 5px solid #0073cf;
+}
+
+
+.company{ 
+    margin-left:5rem;
+    font-size: $m-size;
+    width: 20rem;
+}
+
+.app-footer__logo-image{ 
+  max-width: 130px;
+
+}
+.copyright{ 
+    margin-right:5rem;
+    font-size: $s-size;
+}
+
+.loading{ 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin-top:-16rem;
+}
+
+.sidenav-content{ 
+  width:24rem;
+}

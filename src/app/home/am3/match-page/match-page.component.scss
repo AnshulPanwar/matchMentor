@@ -1,0 +1,51 @@
+.top-container {
+    overflow-x: auto;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.right-container {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.left-container {
+    background: white;
+    min-height: calc( 100vh - 240px);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    margin: 1rem 0 1rem 1rem;
+    width: 100vw;
+    overflow-y: auto;
+}
+
+.right-container {
+    overflow-y: auto;
+    min-height: calc( 100vh - 240px);
+    min-width: 30rem;
+    flex: 1;
+}
+
+.am3__pendingList {
+    border: 1px solid red;
+    width: 153px;
+    height: auto;
+    min-height: 225px;
+    float: right;
+}
+
+.table-label{ 
+  display:flex;
+  border-bottom: lightgray 3px solid;
+  margin: 15px;
+  width: calc( 100% - 30px );
+  height:40px;
+  color: grey;
+  font-size:27px;
+  display:flex;
+}

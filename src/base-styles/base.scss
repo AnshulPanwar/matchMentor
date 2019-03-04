@@ -1,0 +1,79 @@
+html{ 
+  //Makes rem base 10, 10 times larger than px; 1 rem = 10px;
+  font-size: 62.5%;
+}
+
+body{ 
+  height:100%;
+  margin:0;
+  font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+
+app-root{
+  position: absolute;
+  height:100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.html2canvas-container { width: 4500px !important; height: 4500px !important; display:fixed; }
+
+.scalemodx{ 
+margin-top:1px;
+margin-left:1px;
+width:301px;
+}
+
+.mat-input-element{ 
+  font-size:1.6rem !important;
+}
+
+mat-dialog-container{ 
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+
+h1.app-header, app-header{ 
+font-size: 35px;
+font-family: "Museo Slab",Rockwell,serif;
+font-weight: 400;
+}
+
+h2.app-header{ 
+font-size: 25px;
+font-family: "Museo Slab",Rockwell,serif;
+font-weight: 200;
+}
+
+
+a {
+color: #0072ce;
+font-weight: bold;
+text-decoration: none;
+}
+
+a:hover{ 
+cursor:pointer;
+text-decoration: underline;
+}
+
+.color-picker{ 
+left: 65px !important; 
+}
+
+.mat-form-field {
+font-size: 1.5rem !important;
+}
+
+.right-container .mat-tab-label{ 
+min-width:100px;
+}

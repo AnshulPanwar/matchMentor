@@ -1,0 +1,8 @@
+<div class="floating-score"
+  [ngClass]="{
+    'green-color': score >= 90, 
+  'blue-color': score < 90 && score >= 70, 
+  'yellow-color' : score < 70 && score >= 50, 
+  'amber-color': score < 50 && score >= 30, 
+  'red-color': score < 30 && score > 0,
+  'white-color': score == 0 }">{{score}}</div>

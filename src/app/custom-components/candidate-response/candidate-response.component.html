@@ -1,0 +1,11 @@
+<p>
+  candidate-response works!
+</p>
+
+
+<div *ngFor="let item of itemList">
+  <span>{{item.question.description}}</span><br />
+  <div *ngFor="let response of item.answers">
+    <span>{{response.value}}</span>
+  </div>
+</div>

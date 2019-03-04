@@ -1,0 +1,7 @@
+<div class="am3__pendingList">
+    <div *ngFor="let mentee of pendingList">
+      <am3-pending-item [menteeId]="mentee.menteeId" 
+      [menteeSelected]="mentee.menteeSelected" [menteeName]="mentee.menteeName"
+        [menteeScoreCombined]="mentee.menteeScoreCombined" (update)="updatePendingList($event)"></am3-pending-item>
+    </div>
+  </div>

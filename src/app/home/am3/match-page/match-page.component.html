@@ -1,0 +1,84 @@
+<am3-page-header label="AM3: Advanced Mentor & Mentee Matcher">
+  <div class="header-container">
+  </div>
+</am3-page-header>
+
+
+<mat-tab-group [(selectedIndex)]="selectedTab">
+  <mat-tab label="Matched">
+    <div class="top-container" (click)="showButtons = false">
+
+      <div class="left-container">
+        <div class="table-label">
+          <div>Mentor</div>
+          <div class="spacer"></div>
+          <div>Scores</div>
+          <div class="spacer"></div>
+          <div>Mentee</div>
+        </div>
+        <div style="text-align:center;font-size:15px;color:grey">Mentor | Combined | Mentee</div>
+
+        <div class="am3__branchContainer">
+          <div *ngFor="let mentor of mentorTree">
+            <am3-match-tree [mentorId]="mentor.mentorId" [maxMentee]="mentor.maxMentee" [mentorSelected]="mentor.mentorSelected"
+              [mentorName]="mentor.mentorName" (update)="updateMatches($event)" [mentorLockStatus]="mentor.mentorLockStatus"
+              [mentees]="mentor.mentees"></am3-match-tree>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <am3-pending-list [pendingList]="pendingList" (pendingListUpdate)="updateMatchesFromPending($event)"></am3-pending-list>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Approved">
+    <div class="top-container" (click)="showButtons = false">
+
+      <div class="left-container">
+        <div class="table-label">
+          <div style="width:680px;">Mentor</div>
+          <div style="width:150px;">Scores</div>
+          <div style="width:600px;">Mentee</div>
+        </div>
+        <div style="margin-left: 660px;font-size:15px;color:grey">Mentor | Combined | Mentee</div>
+
+        <div class="am3__branchContainer">
+          <div *ngFor="let mentor of mentorTree">
+            <am3-match-tree [mentorId]="mentor.mentorId" [maxMentee]="mentor.maxMentee" [mentorSelected]="mentor.mentorSelected"
+              [mentorName]="mentor.mentorName" (update)="updateMatches($event)" [mentorLockStatus]="mentor.mentorLockStatus"
+              [mentees]="mentor.mentees"></am3-match-tree>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <am3-pending-list [pendingList]="pendingList" (pendingListUpdate)="updateMatchesFromPending($event)"></am3-pending-list>
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Pending">
+    <div class="top-container" (click)="showButtons = false">
+
+      <div class="left-container">
+        <div class="table-label">
+          <div style="width:680px;">Mentor</div>
+          <div style="width:150px;">Scores</div>
+          <div style="width:600px;">Mentee</div>
+        </div>
+        <div style="margin-left: 660px;font-size:15px;color:grey">Mentor | Combined | Mentee</div>
+
+        <div class="am3__branchContainer">
+          <div *ngFor="let mentor of mentorTree">
+            <am3-match-tree [mentorId]="mentor.mentorId" [maxMentee]="mentor.maxMentee" [mentorSelected]="mentor.mentorSelected"
+              [mentorName]="mentor.mentorName" (update)="updateMatches($event)" [mentorLockStatus]="mentor.mentorLockStatus"
+              [mentees]="mentor.mentees"></am3-match-tree>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <am3-pending-list [pendingList]="pendingList" (pendingListUpdate)="updateMatchesFromPending($event)"></am3-pending-list>
+      </div>
+    </div>
+
+  </mat-tab>
+</mat-tab-group>

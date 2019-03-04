@@ -1,0 +1,28 @@
+.page-header {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+
+.page-header__h1 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    padding: 2.8rem 0.8rem;
+}
+
+.page-header .sidenav-toggle {
+    padding: 0 0 3px 0;
+    min-width: 64px;
+    height: 64px;
+}
+
+@media (max-width: 840px) {
+    .page-header .sidenav-toggle {
+        padding: 0;
+        min-width: 64px;
+        height: 64px;
+    }
+}

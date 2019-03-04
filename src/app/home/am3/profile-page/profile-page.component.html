@@ -1,0 +1,58 @@
+<am3-page-header label="AM3: Advanced Mentor & Mentee Matcher">
+  <div class="header-container">
+  </div>
+</am3-page-header>
+
+<div class="top-container">
+
+  <div class="right-container">
+    
+    <div *ngIf="queryParam == 'mentor'" class="table-label">
+      <div>Mentor</div>
+      <div class="spacer"></div>
+      <div>Responses</div>
+      <div class="spacer"></div>
+      <div>Mentee</div>
+    </div>
+    
+    <div *ngIf="queryParam == 'mentee'" class="table-label">
+        <div>Mentee</div>
+        <div class="spacer"></div>
+        <div>Responses</div>
+        <div class="spacer"></div>
+        <div>Mentor</div>
+      </div>
+
+    <div style="display:flex;">
+      <div class="am3__leftCandidateList">
+        <am3-candidate-list-left [candidateList]="unassingedMentees" (onSelectValue)='selectValue($event)'></am3-candidate-list-left>
+      </div>
+
+      <div class="am3__midResponsesList">
+        <mat-tab-group mat-align-tabs="start" mat-align-tabs="center">
+          <mat-tab label="Open ended">
+            <am3-candidate-response [itemList]="candidateList"></am3-candidate-response>
+          </mat-tab>
+          <mat-tab label="Objective"></mat-tab>
+        </mat-tab-group>
+      </div>
+
+      <div class="am3__rightResponsesList">
+        <am3-cadidate-list-right [candidateList]="unassignedMentors" (onSelectValue)='selectedValue($event)'></am3-cadidate-list-right>
+      </div>
+    </div>
+
+    <mat-toolbar class="am3__profileButtonbar">
+      <div>
+        <button mat-raised-button color="primary">
+          <!-- <mat-icon color="basic" class="close-modal-button" >close</mat-icon> -->
+          <i class="material-icons" style="margin-right: 3px;">
+              save
+              </i>Set
+        </button>
+      </div>
+    </mat-toolbar>
+
+  </div>
+
+</div>

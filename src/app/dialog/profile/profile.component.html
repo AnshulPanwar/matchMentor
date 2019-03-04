@@ -1,0 +1,17 @@
+<div class="dialog-container" style="display:flex;flex-direction:column" (drop)="handleFileSelect( $event )" (dragover)="dragover( $event )" >
+    <input hidden #fileUpload type="file" multiple (change)="onSelectFile($event)"/>
+    <h2 class="template-select__header">
+      <span class="spacer"></span>
+        <mat-icon color="basic" class="close-modal-button">close<i class="material-icons">
+            save
+            </i></mat-icon>
+    </h2> 
+  
+  
+    <div class="dialog-panel">
+      <button mat-button color="primary" (click)="closeDialog()" class="button-right-margin">
+        CLOSE
+      </button>
+    </div>
+  </div>
+  

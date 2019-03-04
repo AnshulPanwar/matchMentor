@@ -1,0 +1,100 @@
+
+.top-container {
+  overflow-x: auto;
+  margin: 0;
+  height: 100%;
+  // margin-bottom: 10.5rem;
+  display: flex;
+  align-items: stretch;
+  width:100%;
+}
+
+.right-container{
+
+  background: white;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+	margin: 1rem;
+	font-size:1.5rem;
+}
+
+.left-container{ 
+  // background: white;
+  margin: 1rem 0 1rem 1rem;
+	min-width: 30rem;
+	height: calc( 100vh - 260px);
+	overflow-y: auto;
+}
+
+.right-container{ 
+  overflow-y: auto;
+  min-height: calc( 100vh - 260px);
+	height: 100%;
+  flex:1;
+}
+
+
+.am3__profileSubHeader{
+  width: 100%;
+  height: 50px;
+}
+
+.am3__leftListHeader{
+  // border: 1px solid red;
+  text-align: center;
+  color: white;
+  min-height: calc( 100vh - 260px);
+}
+
+.am3__midListHeader{
+  // border: 1px solid red;
+  text-align: center;
+  color: white;
+}
+
+
+.am3__rightListHeader{
+  // border: 1px solid red;
+  width: 204px;
+  text-align: center;
+  color: white;
+  
+}
+
+.am3__midResponsesList{
+  height:100%;
+  flex-grow:2;
+  float: left;
+  padding: 10px;
+}
+
+.am3__rightResponsesList{
+  // border: 1px solid red;
+  float: left;
+  min-height: calc( 100vh -260px);;
+  
+}
+
+
+.am3__profileButtonbar{
+  margin-top: 176px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content:flex-end;
+    font-size:20px;
+    background: whitesmoke;
+}
+
+.right-container{
+  position: relative;
+}
+
+.table-label{ 
+  border-bottom: lightgray 3px solid;
+  margin: 15px;
+  width: calc( 100% - 30px );
+  height:40px;
+  color: grey;
+  font-size:27px;
+  display:flex;
+}

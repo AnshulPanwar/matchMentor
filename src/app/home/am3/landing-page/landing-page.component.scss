@@ -1,0 +1,89 @@
+.top-container {
+    overflow-x: auto;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.right-container {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.left-container {
+    margin: 1rem 0 1rem 1rem;
+    min-width: 30rem;
+    height: calc( 100vh - 260px);
+    overflow-y: auto;
+}
+
+.right-container {
+    overflow-y: auto;
+    min-height: calc( 100vh - 260px);
+    height: 100%;
+    flex: 1;
+}
+
+.am3__sliderLabel {
+    font-size: 1.50em;
+    padding-top: 10px;
+    // padding-left: 60px;
+    margin-left: 85px;
+}
+
+.am3__sliderValue {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.25em;
+    padding-top: 10px;
+}
+
+.am3__rerunButton {
+    margin-right: 10px;
+}
+.mat-slider-horizontal {
+    height: 48px;
+    min-width: 250px;
+}
+
+.am3__rerunButton{
+    margin-right: 16px;
+    margin-left: 20px;
+}
+
+
+.am3__button{
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.am3__pendingMentors{
+    font-size: 1.50em;
+    position: relative;
+    top: 17px;
+    left: -10px;
+}
+
+.am3__pendingContainer{
+    // border: 2px solid red;
+    width: 290px;
+    float: right;
+}
+
+.am3__pendingContainerbeta{
+    // border: 2px solid red;
+    width: 290px;
+    float: right;
+}
+
+.extra{
+    margin-top: 6px;
+    position: relative;
+    top: -18px;
+}

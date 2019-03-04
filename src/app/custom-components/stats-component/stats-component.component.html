@@ -1,0 +1,12 @@
+<div class="am3__statsContainer">
+  <div class="am3__matchCount">
+    <span class="am3__matchValue" id="countValue" [ngStyle]="{color: countColor}"><ng2-odometer [number]="count"  >{{count}}</ng2-odometer></span>
+
+    <span class="am3__matchTitle">{{countLabel}}</span>
+  </div>
+
+  <div class="am3__matchSubContainer">
+    <ng-content></ng-content>
+  </div>
+
+</div>

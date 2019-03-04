@@ -1,0 +1,80 @@
+.am3__statsContainer {
+    height: auto;
+    // width: 50%;
+    padding-top: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 800px;
+    // border: 1px solid red;
+}
+
+.am3__matchCount {
+    height: auto;
+    min-height: 80px;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.am3__matchValue {
+    font-size: 7em;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: grey;
+    display: inline-table;
+    // border: 1px solid red;
+    width: 180px;
+    text-align: right;
+}
+
+.am3__matchTitle {
+    font-size: 3em;
+    font-weight: 100;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+.am3__sliderValue {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.25em;
+    padding-top: 10px;
+}
+
+.am3__sliderLabel {
+    font-size: 1.50em;
+    padding-top: 10px;
+    padding-left: 60px;
+    margin-left: 85px;
+}
+
+.am3__rerunButton {
+    margin-right: 10px;
+}
+
+.mat-slider-horizontal {
+    height: 48px;
+    min-width: 250px;
+}
+
+.mat-accent .mat-slider-track-fill,
+.mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label {
+    background-color: #01579B !important;
+}
+
+.emp__rerunButton {
+    margin: 0 20px;
+}
+
+.am3__button {
+    margin-right: 10px;
+    float: right;
+}
+
+.am3__matchSubContainer{
+    // border: 1px solid brown;
+}
+
+.am3__pendingMentors{
+    font-size: 1.50em;
+}

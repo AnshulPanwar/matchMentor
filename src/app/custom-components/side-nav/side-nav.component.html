@@ -1,0 +1,29 @@
+<mat-sidenav-container class="main__mat-sidenav-container">
+  <mat-sidenav #sidenav class="sidenav">
+      <div class="sidenav-content">
+        <nav *ngFor="let menuGroup of navArray">
+          <ul class="sidenav__ul">
+              <button class="sidenav__button" 
+                  *ngFor="let menuOption of menuGroup.children"
+                  (click)="closeSideNav()" 
+                  mat-button
+                  [class.active]="menuOption.fragment == currentFragment"
+                  [routerLink]="menuOption.link" [fragment]="menuOption.fragment" >{{menuOption.name}}
+              </button>
+          </ul>
+          </nav>
+      </div>
+    </mat-sidenav>
+  <div class="main__main-content">
+      <ng-content></ng-content>
+      <div *ngIf="loading" class="loading">
+          <mat-spinner  color="accent"></mat-spinner>
+      </div>
+  </div>
+  
+  <div class="app-footer">
+    <div class="company"><img src="/assets/eab_logo.png" class="app-footer__logo-image"></div>
+    <div class="spacer"></div>
+    <div class="copyright">2019 Hackathon</div>
+</div>
+</mat-sidenav-container>
